@@ -1,4 +1,4 @@
-ame: Bonjour
+name: Bonjour
 on:
   - push
 jobs:
