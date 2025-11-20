@@ -3,8 +3,11 @@ on:
   - push
 jobs:
   dire_bonjour:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v5
       - run: ls -l # Liste les fichier du répertoire courant
-      - run: cat README.md 
+      - run:  |
+              sudo apt-get update
+              sudo apt-get install -y cowsay   
+      - run: cat README.md | cowsay
