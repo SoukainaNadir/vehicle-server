@@ -1,0 +1,18 @@
+name: Vehicle Server CI
+
+on:
+  - push:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+
+      - run: npm install
+      - run: npm run build
+      - run: ls -R dist
