@@ -3,11 +3,13 @@ on:
   - push
 jobs:
   dire_bonjour:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - run: ls -l # Liste les fichier du répertoire courant
-      - run:  |
-              sudo apt-get update
-              sudo apt-get install -y cowsay   
-      - run: cat README.md | cowsay
+      - uses: actions/checkout@v5 
+      - uses: juliangruber/read-file-action@v1
+        id: readfile
+        with:
+          path: ./README.md
+      - uses: Code-Hex/neo-cowsay-action@v1
+        with:
+          message: ${{ steps.readfile.outputs.content }}
