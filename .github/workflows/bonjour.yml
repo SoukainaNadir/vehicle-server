@@ -1,8 +1,9 @@
-name: Bonjour
+ame: Bonjour
 on:
   - push
 jobs:
   dire_bonjour:
     runs-on: ubuntu-24.04
     steps:
-      - run: echo "Bonjour 👋"
+      - run: ls -l # Liste les fichier du répertoire courant
+      - run: cat README.md 
