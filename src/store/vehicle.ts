@@ -87,8 +87,10 @@ function newVehicleFromRow(vehicleRow: row): Vehicle {
     vehicleRow.shortcode,
     vehicleRow.battery,
     {
-      longitude: vehicleRow.lat,
-      latitude: vehicleRow.long
+            longitude: vehicleRow.long,
+
+            latitude: vehicleRow.lat,
+
     },
   )
 }
