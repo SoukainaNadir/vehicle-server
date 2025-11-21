@@ -34,7 +34,7 @@ export class CreateVehicleController {
     res.status(200).json({ vehicle: vehicle });
   }
 }
-
+   
 function validateRequestPayload(req: CreateVehiclePayload): string[] {
   const violations :string[] = []
 

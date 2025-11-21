@@ -6,10 +6,13 @@
   "author": "Soukaina",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@types/express": "^5.0.5",
     "@types/node": "^24.10.1",
     "@types/pg": "^8.15.6",
-    "typescript": "^5.9.3"
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.47.0"
   },
   "dependencies": {
     "express": "^5.0.1",
@@ -19,6 +22,7 @@
     "build": "rm -rf ./dist && tsc",
     "start": "npm run build && node dist/index.js",
     "start-db": "docker container run -d --name vehicle-database -e POSTGRES_USER=vehicle -e POSTGRES_PASSWORD=vehicle -e POSTGRES_DB=vehicle -p 5432:5432 postgis/postgis:16-3.4-alpine",
-    "stop-db": "docker container rm -f vehicle-database"
+    "stop-db": "docker container rm -f vehicle-database",
+    "lint": "eslint ./src"
   }
 }

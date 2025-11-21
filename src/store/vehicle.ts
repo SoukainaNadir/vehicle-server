@@ -55,7 +55,7 @@ export class VehicleStore {
       throw new Error("unexpected amount of rows returned");
     }
 
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */
+     
     const vehicleRow :row = result.rows[0];
 
     return newVehicleFromRow(vehicleRow);

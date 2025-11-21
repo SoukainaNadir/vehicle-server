@@ -1,5 +1,5 @@
 export class FakeResponse {
-  gotStatus: number = 0;
+  gotStatus = 0;
   gotJson: object = {};
 
   json(p: object): FakeResponse {
