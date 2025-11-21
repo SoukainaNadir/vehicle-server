@@ -19,3 +19,4 @@ jobs:
       - run: npm run build
       - run: npm run lint
       - run: ls -R dist
+      - run: npm run test 
