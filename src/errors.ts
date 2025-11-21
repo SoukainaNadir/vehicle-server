@@ -33,7 +33,7 @@ export function errorHandler(err: Error, req: Request, res: Response, next: Next
       error: {
         code: err.code,
         message: err.message,
-        details: err.details, // eslint-disable-line @typescript-eslint/no-unsafe-assignment -- not unsafe.
+        details: err.details,  
       }
     });
 
